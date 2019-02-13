@@ -1,0 +1,43 @@
+{
+  "name": "edl-edit",
+  "version": "0.5.0",
+  "description": "an app to edit the timecode of edl clips",
+  "main": "app.js",
+  "scripts": {
+    "node": "nodemon app.js",
+    "edl": "nodemon txt-parse.js",
+    "sass": "sass --watch --sourcemap=none sass/main.scss:public/css/style.css --style compressed",
+    "parcel": "parcel index.html",
+    "build": "parcel build index.html --public-url ./"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gerkx/edl-edit.git"
+  },
+  "keywords": [
+    "edl",
+    "edit",
+    "gerkx",
+    "big bang box"
+  ],
+  "author": "gerkx",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gerkx/edl-edit/issues"
+  },
+  "homepage": "https://github.com/gerkx/edl-edit#readme",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "compression": "^1.7.3",
+    "cors": "^2.8.5",
+    "ejs": "^2.6.1",
+    "express": "^4.16.4",
+    "method-override": "^3.0.0"
+  },
+  "devDependencies": {
+    "gulp-cli": "^2.0.1",
+    "node-sass": "^4.11.0",
+    "nodemon": "^1.18.9",
+    "parcel-bundler": "^1.11.0"
+  }
+}

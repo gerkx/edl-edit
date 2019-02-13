@@ -1,0 +1,103 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto:400,700|Roboto+Mono");
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: 'Roboto', sans-serif;
+  color: #484D6D;
+  background: linear-gradient(rgba(72, 77, 109, 0.95), rgba(72, 77, 109, 0.95)), url("timeline.49f885f8.jpg") no-repeat center center fixed; }
+
+*, *::before, *::after {
+  box-sizing: border-box; }
+
+.container {
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column; }
+  .container > h1 {
+    color: #EBEBEB; }
+
+.edl {
+  width: 80vw;
+  height: 20vw;
+  background: #EBEBEB;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  overflow: hidden; }
+  .edl__file {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center; }
+    .edl__file-zone {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      align-items: center;
+      fill: #484D6D; }
+      .edl__file-zone--active {
+        background: #fff; }
+    .edl__file-icon {
+      height: 50%; }
+    .edl__file-manual {
+      width: 0.1px;
+      height: 0.1px;
+      opacity: 0;
+      overflow: hidden;
+      position: absolute;
+      z-index: -1; }
+    .edl__file-label {
+      display: inline;
+      color: #484D6D;
+      font-size: 1.25rem;
+      cursor: pointer;
+      font-weight: 700;
+      transition: color 100ms ease-in-out; }
+      .edl__file-label:hover {
+        color: #08B2E3; }
+    .edl__file-opt {
+      height: 100%; }
+
+.anim-out {
+  animation: anim-out 1000ms ease-in-out forwards; }
+
+@keyframes anim-out {
+  0% {
+    transform: translateY(0); }
+  100% {
+    transform: translateY(-100%); } }
+
+.file {
+  width: 75%;
+  height: 33%;
+  background: #EE6352;
+  border-radius: 1rem;
+  padding: 2rem;
+  display: flex;
+  justify-content: center; }
+  .file__input {
+    width: 0.1px;
+    height: 0.1px;
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    z-index: -1; }
+  .file__label {
+    background-color: #1C72AE;
+    padding: 1rem 2rem;
+    color: #fff;
+    font-size: 1.5rem;
+    display: block;
+    cursor: pointer;
+    transition: background-color 250ms ease-in-out; }
+    .file__label:hover {
+      background-color: #155582; }

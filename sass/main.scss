@@ -1,0 +1,143 @@
+$cd-orange: #EE6352;
+$cd-blue: #08B2E3;
+$cd-green: #57A773;
+$cd-slate: #484D6D;
+$cd-frost: #EBEBEB;
+
+$cd-prime: #1C72AE;
+$cd-second: #FF6B35;
+$cd-tert: #EBEBEB;
+$cd-neut: #545F66;
+$cd-white: #fff;
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,700|Roboto+Mono');
+
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: 'Roboto', sans-serif;
+    color: $cd-slate;
+    background:
+        linear-gradient(
+            rgba($cd-slate, 0.95), 
+            rgba($cd-slate, 0.95)
+        ),
+        url('../public/img/timeline.jpg') no-repeat center center fixed;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    > h1 {
+        color: $cd-tert;
+    }
+}
+
+.edl {
+    width: 80vw;
+    height: 20vw;
+    background: $cd-frost;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    overflow: hidden;
+    &__file {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-items: center;
+        &-zone {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            align-items: center;
+            fill: $cd-slate;
+            &--active {
+                background: $cd-white;
+            }
+        }
+        &-icon {
+            height: 50%;
+        }
+        &-manual{
+            width: 0.1px;
+            height: 0.1px;
+            opacity: 0;
+            overflow: hidden;
+            position: absolute;
+            z-index: -1;
+        }
+        &-label {
+            display: inline;
+            color: $cd-slate;
+            font-size: 1.25rem;
+            cursor: pointer;
+            font-weight: 700;
+            transition: color 100ms ease-in-out;
+            &:hover {
+                color: $cd-blue;
+            }
+        }
+        &-opt {
+            height: 100%;
+        }
+    }
+}
+
+.anim-out {
+    animation: anim-out 1000ms ease-in-out forwards;
+}
+
+@keyframes anim-out {
+    0%{
+        transform: translateY(0);
+    }
+    100%{
+        transform: translateY(-100%);
+    }
+}
+
+.file {
+    width: 75%;
+    height: 33%;
+    background: $cd-orange;
+    border-radius: 1rem;
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+    &__input{
+        width: 0.1px;
+        height: 0.1px;
+        opacity: 0;
+        overflow: hidden;
+        position: absolute;
+        z-index: -1;
+    }
+    &__label {
+        background-color: $cd-prime;
+        padding: 1rem 2rem;
+        color: $cd-white;
+        font-size: 1.5rem;
+        display: block;
+        cursor: pointer;
+        transition: background-color 250ms ease-in-out;
+        &:hover {
+            background-color: darken($cd-prime, 10);
+        }
+
+    }
+}
+
